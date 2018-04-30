@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="./master.css">
+  <title>珠宝玉器-导航</title>
+</head>
+<body>
+  <div id="wrap">
+    <div id="nav">
+      <ul>
+        <li>珠宝玉器<span>></span></li>
+        <li>珠宝玉器<span>></span></li>
+        <li>珠宝玉器<span>></span></li>
+        <li>珠宝玉器<span>></span></li>
+        <li>珠宝玉器<span>></span></li>
+      </ul>
+    </div>
+    <div class="panel" id="panel-first">
+      <ul>
+        <li>翡翠</li>
+        <li>玉石</li>
+        <li>宝石</li>
+        <li>水晶</li>
+        <li>玛瑙</li>
+        <li>珍珠</li>
+        <li>钻石</li>
+        <li>琥珀</li>
+        <li>和田</li>
+        <li>蜜蜡</li>
+      </ul>
+    </div>
+    <div class="panel" id="panel-second">
+      <ul>
+        <li>翡翠</li>
+        <li>玉石</li>
+        <li>宝石</li>
+        <li>水晶</li>
+        <li>玛瑙</li>
+        <li>珍珠</li>
+      </ul>
+    </div>
+    <div class="panel" id="panel-third">
+      <ul>
+        <li>翡翠</li>
+        <li>玉石</li>
+        <li>宝石</li>
+        <li>水晶</li>
+      </ul>
+    </div>
+    <div class="panel" id="panel-fourth">
+      <ul>
+        <li>翡翠</li>
+        <li>玉石</li>
+        <li>宝石</li>
+        <li>水晶</li>
+        <li>玛瑙</li>
+        <li>珍珠</li>
+      </ul>
+    </div>
+    <div class="panel" id="panel-fifth">
+      <ul>
+        <li>翡翠</li>
+        <li>玉石</li>
+        <li>宝石</li>
+        <li>水晶</li>
+      </ul>
+    </div>
+  </div>
+  <script>   
+    var $li=$('#nav li');
+    $li.mouseenter(function(){
+      var $this=$(this)
+      var index=$this.index()
+    $('.panel').eq(index).addClass('active')
+               .siBlings().removeClass('active')
+    })
+    $li.mouseleave(function(){
+      var $this=$(this)
+      var index=$this.index()
+      $('.panel').eq(index).removeClass('active')
+    })
+  </script>
+</body>
+</html>
